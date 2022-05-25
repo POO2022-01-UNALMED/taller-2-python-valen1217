@@ -24,14 +24,14 @@ class Auto:
     def cantidadAsientos(self):
         counter = 0
         for asiento in self.asientos:
-            if asiento is Asiento:
+            if type(asiento) is Asiento:
                 counter += 1
         return counter
 
     def verificarIntegridad(self):
         asientos_correctos = []
         for asiento in self.asientos:
-            if asiento is Asiento:
+            if type(asiento) is Asiento:
                 asientos_correctos.append(asiento)
         if self.registro == self.motor.registro:
             for asiento_correcto in asientos_correctos:
